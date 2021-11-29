@@ -7,14 +7,14 @@
 def sort_func(example_list, step):
     if step > 0:
         result_list = example_list[-step:]
-        result_list = result_list[::-1]
         result_list += example_list[:(len(example_list)-step)]
     
     if step < 0:
         step *= (-1)
+        
         result_list = example_list[step:] + example_list[:step]
 
     print(result_list)
 
         
-sort_func([1, 2, 3, 4, 5], 1)
+sort_func([1, 2, 3, 4, 5], 3)
